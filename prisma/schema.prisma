@@ -10,8 +10,35 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum QuestState {
+  MISSION
+  RESTING
+  LOADING
+  DOING
+  DONE
+}
+
 model MagicOver {
   id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  weightLimit Float
+  energy      Float
+  questState  QuestState
+
+  magicItems MagicItem[]
+
+  createdAt DateTime @default(now()) @db.Timestamp()
+  updatedAt DateTime @updatedAt @db.Timestamp()
+}
+
+model MagicItem {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+
+  name   String
+  weight Float
+
+  magicOver   MagicOver @relation(fields: [magicOverId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  magicOverId String    @db.ObjectId
 
   createdAt DateTime @default(now()) @db.Timestamp()
   updatedAt DateTime @updatedAt @db.Timestamp()
