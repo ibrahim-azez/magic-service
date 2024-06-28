@@ -5,6 +5,7 @@ import { ClsModule } from 'nestjs-cls';
 
 import { GlobalModule } from './core/modules/global/global.module';
 import { PrismaService } from './core/modules/global/services/prisma.service';
+import { MagicItemModule } from './modules/magic-item/magic-item.module';
 import { MagicOverModule } from './modules/magic-over/magic-over.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -30,6 +31,7 @@ import { AppService } from './app.service';
     }),
     GlobalModule,
     MagicOverModule,
+    MagicItemModule,
   ],
   controllers: [AppController],
   providers: [AppService],
