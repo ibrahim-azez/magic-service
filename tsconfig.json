@@ -7,15 +7,37 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
+    "esModuleInterop": true,
     "sourceMap": true,
+    "moduleResolution": "node",
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strictBindCallApply": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "paths": {
+      "@core/*": ["src/app/core/*"],
+      "@common/*": ["src/app/common/*"],
+      "@modules/*": ["src/app/modules/*"],
+      "@generated/*": ["src/app/generated/*"]
+    }
+  },
+  "ts-node": {
+    "files": true,
+    "esm": true,
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "strict": true
+    }
   }
 }
