@@ -8,7 +8,7 @@ import {
   Put,
   Query,
 } from '@nestjs/common';
-import { ApiCreatedResponse, ApiOkResponse } from '@nestjs/swagger';
+import { ApiCreatedResponse, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 
 import { MAGICS_OVER_API_PATH } from '../../../common/utils/constants';
 import { ChangeMagicOverStatusDto } from '../dtos/change-magic-over-status.dto';
@@ -19,6 +19,7 @@ import { GetAllMagicOverQueryBuilderService } from '../services/get-all-magic-ov
 import { MagicOverService } from './magic-over.service';
 
 @Controller(MAGICS_OVER_API_PATH)
+@ApiTags('Magic Over')
 export class MagicOverController {
   constructor(
     private readonly _magicOverService: MagicOverService,
