@@ -23,7 +23,7 @@ model MagicOver {
 
   weightLimit Float
   energy      Float
-  questState  QuestState
+  questState  QuestState @default(RESTING)
 
   magicItems MagicItem[]
 
