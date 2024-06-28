@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
 
 import { GlobalFacade } from '../../../core/modules/global/services/global.facade';
-import { CreateMaginOverDto } from '../dtos/create-magic-over.dto';
+import { ChangeMagicOverStatusDto } from '../dtos/change-magic-over-status.dto';
+import { CreateMagicOverDto } from '../dtos/create-magic-over.dto';
 
 import { MagicOverRepository } from './magic-over.repository';
 
@@ -11,7 +12,10 @@ export class MagicOverService {
     private readonly _globalFacade: GlobalFacade,
     private readonly _magicOverRepository: MagicOverRepository,
   ) {}
-  async create(createMagicOverDto: CreateMaginOverDto) {
+  async create(createMagicOverDto: CreateMagicOverDto) {
     return this._magicOverRepository.create(createMagicOverDto);
+  }
+  async changeStatus(changeMagicOverStatusDto: ChangeMagicOverStatusDto) {
+    return this._magicOverRepository.changeStatus(changeMagicOverStatusDto);
   }
 }

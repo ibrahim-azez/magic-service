@@ -3,6 +3,7 @@ import { ApiCreatedResponse } from '@nestjs/swagger';
 
 import { MAGICS_API_PATH } from '../../../common/utils/constants';
 import { CreateMagicItemDto } from '../dtos/create-magic-item.dto';
+import { CreateMagicItemPipe } from '../pipes/create-magic-item.pipe';
 
 import { MagicItemService } from './magic-item.service';
 
@@ -13,7 +14,9 @@ export class MagicItemController {
   @Post()
   @HttpCode(HttpStatus.CREATED)
   @ApiCreatedResponse()
-  async create(@Body() _magicItemRepository: CreateMagicItemDto) {
-    return this._magicOverService.create(_magicItemRepository);
+  async create(
+    @Body(CreateMagicItemPipe) magicItemRepository: CreateMagicItemDto,
+  ) {
+    return this._magicOverService.create(magicItemRepository);
   }
 }

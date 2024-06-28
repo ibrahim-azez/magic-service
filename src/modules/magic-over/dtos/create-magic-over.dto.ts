@@ -2,7 +2,7 @@ import { IsNumber, Min } from 'class-validator';
 
 import { ApiProperty } from '@nestjs/swagger';
 
-export class CreateMaginOverDto {
+export class CreateMagicOverDto {
   @ApiProperty({ type: Number })
   @IsNumber()
   @Min(0)
