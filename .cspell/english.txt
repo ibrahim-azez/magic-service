@@ -1,0 +1,8 @@
+birthdate
+Booleanish
+clusterable
+expensy
+Numberish
+Stringish
+Ibrahim
+Azez

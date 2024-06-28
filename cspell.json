@@ -1,0 +1,29 @@
+{
+  "caseSensitive": false,
+  "dictionaries": ["english", "programming"],
+  "ignorePaths": [
+    "node_modules/**",
+    "dist/**",
+    "coverage/**",
+    ".vscode/**",
+    ".husky/**",
+    "**/generated/**",
+    "**/assets/i18n/ar-SY/**",
+    "**/media/utils/file-type.d.ts",
+    "src/app/modules/seed/data/country/flags_iso.ts",
+    "src/app/modules/seed/data/category/categories.ts",
+    "pnpm-lock.yaml"
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "english",
+      "path": "./.cspell/english.txt",
+      "addWords": true
+    },
+    {
+      "name": "programming",
+      "path": "./.cspell/programming.txt",
+      "addWords": true
+    }
+  ]
+}

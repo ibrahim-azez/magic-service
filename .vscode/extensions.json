@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "Prisma.prisma",
+        "ChakrounAnas.turbo-console-log",
+        "mhutchie.git-graph",
+        "ms-azuretools.vscode-docker",
+        "streetsidesoftware.code-spell-checker",
+        "Huuums.vscode-fast-folder-structure"
+    ],
+}
